@@ -115,3 +115,33 @@ Khi Switch biết địa chỉ đích (địa chỉ MAC đã có trong MAC ADDRE
 ![image](img/d5_img8.png)
 
 - Ghi chú: Địa chỉ MAC động sẽ bị xóa khỏi bảng sau 5 phút không hoạt động.
+
+### Câu hỏi
+Q1. Trường nào của khung Ethernet cung cấp khả năng đồng bộ hóa xung nhịp máy thu?
+a. Preamble -> CA
+b. SFD - Chức năng kết thúc phần mở đầu 
+c. Type - Cho biết loại gói tin được đóng gói trong khung
+d. FCS - Chuỗi kiểm tra khung được sử dụng để phát hiện lỗi xảy ra trong quá trình truyền
+
+Q2. Địa chỉ vật lý của một thiết bị mạng (MAC) dài bao nhiêu?
+a. 32 byte
+b. 32 bits - Địa chỉ IP
+c. 48 bytes
+d. 48 bits -> CA
+
+Q3. OUI (Mã định danh duy nhất cho tổ chức) của địa chỉ MAC này là gì? E8BA.7011.2874
+a. E8BA
+b. E8BA.70 -> CA - Nửa đầu tiên (24 bit) của địa chỉ MAC
+c. 7011
+d. E8BA.7011
+
+Q4. Trường nào của khung Ethernet được bộ chuyển mạch sử dụng để điền vào bảng địa chỉ MAC của nó?
+a. Preamble
+b. Length - Biểu thị độ dài của gói tin được đóng gói  
+c. Địa chỉ MAC nguồn -> CA
+d. Địa chỉ MAC đích 
+
+Q5. Switch sẽ gửi loại khung nào ra khỏi tất cả các giao diện ngoại trừ giao diện mà nó được nhận?
+a. Đơn hướng không xác định -> CA - Là khung được gửi đến một máy chủ duy nhất, tuy nhiên switch không biết cách tiếp cận đích nên gửi lại khung ra khỏi tất cả giao diện mạng trừ giao diện mạng mà nó được nhận
+b. Đơn hướng xác định
+c. Allcast

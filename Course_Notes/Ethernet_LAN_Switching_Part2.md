@@ -142,3 +142,33 @@ SW1 #clear mac address-table dynamic interface <optional Interface>
     Mục đích: Giảm số lượng tuyến trong bảng định tuyến, tối ưu router.
 
     Ví dụ: Gộp các mạng 192.168.0.0/24, 192.168.1.0/24, 192.168.2.0/24 thành 192.168.0.0/22.
+
+### Câu hỏi
+Q1. Bạn gửi lệnh ping 36-byte đến một máy tính khác và thực hiện bắt gói tin để phân tích lưu lượng mạng. Bạn nhận thấy 01 chuỗi dài 00000000 ở cuối payload Ethernet. Bạn giải thích những con số 0 này như thế nào?
+a. Ping là 01 chuỗi số 0
+b. Chúng là các byte đệm -> CA - Gửi đi 36 trong khi payload tối thiểu là 46 nên 0 được đệm vào để đáp ứng kích thước payload
+c. Chúng là Ethernet FCS
+
+Q2. Trong các thông báo sau, thông báo được gửi đến tất cả máy chủ trên mạng cục bộ?
+a. ARP request -> CA - Vì địa chỉ lớp 2 vẫn chưa được biết tên 
+b. ARP rely
+c. ICMP echo request - tin nhắn đơn hướng, kiểm tra khả năng tiếp cận của một máy chủ cụ thể 
+d. ICMP echo reply - tin nhắn đơn hướng, kiểm tra khả năng tiếp cận của một máy chủ cụ thể 
+
+Q3. Những trường nào có trong kết quả đầu ra của lệnh show mac address-table trên switch Cisco?
+a. Địa chỉ MAC, Ports
+b. VLAN, Địa chỉ MAC, Ports
+c. VLAN, Địa chỉ MAC, Type, Ports -> CA
+d. Địa chỉ Internet, địa chỉ vật lý, và Type. -  arp -a, 01 phần của bảng ARP trên máy tính windown
+
+Q4. Switch gửi những loại khung nào ra khỏi tất cả các giao diện ngoại trừ giao diện mà nó được nhận?
+a. Broadcast, unknown unicast -> Broadcast có địa chỉ đích là FFFF.FFFF.FFFF và được gửi đến tất cả các máy chủ trên mạng cục bộ
+b. Broadcast, known unicast
+c. Known unicast, unknown unicast
+d. Broadcast, known unicast, unknown unicast
+
+Q5. Lệnh nào được sử dụng trên switch Cisco để xóa tất cả các địa chỉ MAC động trên một giao diện cụ thể khỏi bảng địa chỉ MAC?
+a. clear mac address-table interface interface-id
+b. clear mac-address-table dynamic interface interface-id
+c. clear mac address-table dynamic interface interface-id
+d. clear mac address-table dynamic interface interface-id -> CA

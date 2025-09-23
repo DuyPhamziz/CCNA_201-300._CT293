@@ -197,7 +197,7 @@ Dùng để xác nhận giao diện đã hoạt động.
 
 - Hiển thị mô tả của từng giao diện.
 
-ExamVí dụ:ple:
+Ví dụ:ple:
 
 // Configure mode for interface Gigabyte Interface 0/0
 
@@ -210,3 +210,19 @@ This sets the 'Description' column to display:
 Interface 				Description
 
 Gi0/0                   ## to SW1 ##
+
+
+### Câu hỏi
+Q1. PC1 có địa chỉ IP là 43.109.23.12/8 .Tìm những thông tin sau.
+Network address: 43.0.0.0
+Số lượng máy chủ tối đa trong mạng: 16,777,214 (2^(32-8) - 2)
+Network broadcast address: 43.255.255.255
+Địa chỉ sử dụng đầu tiên của mạng: 43.0.0.1
+Địa chỉ sử dụng cuối cùng của mạng: 42.255.255.254
+
+Q2.  PC4 có địa chỉ IP là 129.221.23.13/16 .Tìm những thông tin sau.
+Network address: 129.221.0.0
+Số lượng máy chủ tối đa trong mạng: (2^(32-16) - 2)
+Network broadcast address: 129.221.255.255
+Địa chỉ sử dụng đầu tiên của mạng: 129.221.0.1
+Địa chỉ sử dụng cuối cùng của mạng: 129.221.255.254
